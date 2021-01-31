@@ -3,13 +3,14 @@ class BOX{
     constructor(x,y){
 
         var options={
-            isStatic:true,
+            //isStatic:true,
             restituition:0.7,
             friction:0.1,
             density:0.1
         }
-        this.body=Bodies.rectangle(x,y,20,20,options);
+        this.body=Bodies.rectangle(x,y,50,50,options);
         this.image=loadImage("sprite_0.png");
+        this.visiblity=255;
         World.add(world,this.body);
     }
 
@@ -28,10 +29,18 @@ class BOX{
         else{
               World.remove(world,this.body);
               push ();
-              this.visibility=this.visibility-5;
-              tint (255,this.visibility);
+              this.visiblity=this.visiblity-5;
+              tint (255,this.visiblity);
               image(this.image,this.body.position.x,this.body.position.y,50,50);
               pop ();
             }
+
     }
-}
+
+    score(){
+        if (this.visiblity < 0 && this.visiblity > -55){
+          score++;
+       }
+    }
+
+    }

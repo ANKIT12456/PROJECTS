@@ -5,6 +5,7 @@ const Body=Matter.Body;
 const Constraint=Matter.Constraint;
 
 var world,engine,score=0,backgroundImg;
+var box1,box2,box3,box4,box5,box6,box7,box8,box9,box10,box11,box12,box13,box14,box15;
 
 function preload(){
     getTime();
@@ -58,34 +59,47 @@ function draw(){
         }
     ground1.display();
 
+  
+
     box1.display();
+    box1.score();
     box2.display();
+    box2.score();
     box3.display();
+    box3.score();
     box4.display();
+    box4.score();
     box5.display();
+    box5.score();
 
     box6.display();
+    box6.score();
     box7.display();
+    box7.score();
     box8.display();
+    box8.score();
     box9.display();
+    box9.score();
 
     box10.display();
+    box10.score();
     box11.display();
+    box11.score();
     box12.display();
+    box12.score();
 
     box13.display();
+    box13.score();
     box14.display();
+    box14.score();
 
     box15.display();
+    box15.score();
 
 
     polygon.display();
 
     slingshot.display();
-
-    textSize(30);
-    fill ("black"); 
-    text ("SCORE= "+score,1000,50);  
 
     detectcollision(polygon,box1);
     detectcollision(polygon,box2);
@@ -101,7 +115,10 @@ function draw(){
     detectcollision(polygon,box12);
     detectcollision(polygon,box13);
     detectcollision(polygon,box14);
-    detectcollision(polygon,box15);   
+    detectcollision(polygon,box15); 
+    textSize(30);
+    fill ("red"); 
+    text ("SCORE= "+score,600,50);  
 
 }
 

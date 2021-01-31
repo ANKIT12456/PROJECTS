@@ -8,7 +8,7 @@ class POLYGON{
             friction:0.5,
             density:0.7
         }
-        this.body=Bodies.rectangle(x,y,20,20,options);
+        this.body=Bodies.rectangle(x,y,50,50,options);
         this.image=loadImage("polygon.png");
         World.add(world,this.body);
     }
